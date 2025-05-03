@@ -43,6 +43,7 @@ export function Header({
 
   return (
     <header
+      suppressHydrationWarning
       className={cn(
         "sticky top-0 z-50 w-full backdrop-blur-lg",
         isScrolled
@@ -68,9 +69,9 @@ export function Header({
                 href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
                 onClick={handleScrollToSection}
                 className="text-xs lg:text-sm font-medium text-muted-foreground transition-colors hover:text-foreground relative group"
-              >
+              > 
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"/>
               </motion.a>
             )
           )}
@@ -100,6 +101,7 @@ export function Header({
             transition={{ duration: 0.3, delay: 0.4 }}
           >
             <Button
+              
               variant="secondary"
               size="icon"
               onClick={handleThemeToggle}
@@ -176,7 +178,7 @@ export function Header({
                   className="py-2 text-sm font-medium relative overflow-hidden group"
                 >
                   <span className="relative z-10">{item}</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"/>
                 </motion.a>
               )
             )}

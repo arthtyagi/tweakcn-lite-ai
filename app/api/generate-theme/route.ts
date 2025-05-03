@@ -5,7 +5,7 @@ import { z } from "zod";
 import { themeStylePropsSchema } from "@/types/theme";
 import kv from "@vercel/kv";
 import { Ratelimit } from "@upstash/ratelimit";
-import { NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 const requestSchema = z.object({
   prompt: z.string().min(1),

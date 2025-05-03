@@ -1,7 +1,7 @@
 import { getEditorConfig } from "@/config/editors";
 import { cn } from "@/lib/utils";
 import Editor from "@/components/editor/editor";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Header } from "../../../../components/editor/header";
 import { getTheme } from "@/actions/themes";
 import { Suspense } from "react";
